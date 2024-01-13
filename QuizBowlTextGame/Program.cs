@@ -1,9 +1,19 @@
-﻿// Game for Quiz Bowl Practice
+// Game for Quiz Bowl Practice
 using System;
 
 // Game
 public class QuizBowlGame
 {
+    public static void CheckCommands(string cmd){
+        switch (Input.ToUpper()){
+            case: "SKIP":
+                goto Run;
+            case: "HELP":
+                // List cmds
+                break;
+        }
+    }
+
     public static void Main(string[] args)
     {
         // Interface vars
@@ -34,9 +44,7 @@ public class QuizBowlGame
             for (int i = 0; i < group.Length(); i++){
                 string Answer = group.questions[rand.Next(0, group.questions.Length)].Print(practice);
             	Input = Console.ReadLine();
-            	if (Input.ToUpper() == "SKIP"){
-            	    goto Run;
-            	}
+                CheckCommands(Input);
             	if (Input.ToUpper() == Answer.ToUpper()){
                     correct++;
             	    Console.WriteLine($"Correct; \n\tScore:{correct}|{wrong}");
