@@ -13,8 +13,8 @@ public class QuizBowlGame
             new CGMath()
         };
         var rand = new Random();
-        Console.Clear();
-        string Input;
+        int correct = 0, wrong = 0;
+        string Input = " ";
         SetMode:
             bool practice = false;
             Console.WriteLine("Do you want hints on? Y/N");
@@ -38,9 +38,11 @@ public class QuizBowlGame
             	    goto Run;
             	}
             	if (Input.ToUpper() == Answer.ToUpper()){
-            	    Console.WriteLine("Gd");
+                    correct++;
+            	    Console.WriteLine($"Correct; \n\tScore:{correct}|{wrong}");
             	}else{
-            	    Console.WriteLine($"Wrg; Correct: {Answer}");
+                    wrong++;
+            	    Console.WriteLine($"Wrg; Correct: {Answer} \n\tScore:{correct}|{wrong}");
             	}
             }
     	goto Run;
