@@ -58,7 +58,7 @@ public class LightningRound : QuestionGroup{
     }
     
     public override void Print(){
-            Console.WriteLine($"Theme: {theme} \nRule: {rule}");
+        Console.WriteLine($"Theme: {theme} \nRule: {rule}");
     }
     
     public override int Length(){
@@ -74,5 +74,12 @@ public class ConceptGroup{
     public ConceptGroup(){
         concept = "";
         groups = new QuestionGroup[] {new QuestionGroup(), new LightningRound()};
+    }
+
+    public void WriteData(){
+        Console.WriteLine($"\nConcept: {concept}");
+        for(int i = 0; i < groups.Length; i++){
+            Console.WriteLine($"\t{i}.\t{groups[i].theme}");
+        }
     }
 }

@@ -4,13 +4,41 @@ using System;
 // Game
 public class QuizBowlGame
 {
-    public static void CheckCommands(string cmd){
-        switch (Input.ToUpper()){
-            case: "SKIP":
-                goto Run;
-            case: "HELP":
-                // List cmds
-                break;
+    public static void Help(){
+        Console.WriteLine("____COMMANDS____\nSKIP\tSkip to a different subject and question.\nEXIT\tExit the program.\nLIST\tList all questions.\nGOTO\tGo to a certian question.\nDIFF\tChange difficulty.\n");
+    }
+    public static void ListQuestions(ConceptGroup[] concepts){
+        for (int i = 0; i < concepts.Length; i++){
+            Console.Write($"{i}.\t");
+            concepts[i].WriteData();
+        }
+    }
+    public static void GetIDs(out int conceptID, out int groupID){
+        conceptID = groupID = 0; // Just eliminates errors
+        // Prepares vars for use
+        bool idset = false;
+        string input;
+        int inputInt;
+        while (!idset){ // Gets the concept group ID
+            Console.WriteLine("\nEnter the numeric id of the general concept.");
+            input = Console.ReadLine();
+            if (int.TryParse(input, out inputInt)){
+                idset = true;
+                conceptID = inputInt;
+            } else {
+                Console.WriteLine("Please enter an integer.");
+            }
+        }
+        idset = false; // Reuse var
+        while (!idset){ // Gets the question group ID
+            Console.WriteLine("\nEnter the numeric id of the question grouping.");
+            input = Console.ReadLine();
+            if (int.TryParse(input, out inputInt)){
+                idset = true;
+                groupID = inputInt;
+            } else {
+                Console.WriteLine("Please enter an integer.");
+            }
         }
     }
 
@@ -22,10 +50,13 @@ public class QuizBowlGame
             new CGMedia(),
             new CGMath()
         };
+        bool run = true;
         var rand = new Random();
         int correct = 0, wrong = 0;
         string Input = " ";
-        SetMode:
+        // Initial statements
+        Console.WriteLine("____Quiz Bowler____\n\u00A9 2024 DecCatBurner\nFor a list of commands type \"help\"");
+        SetMode: // Difficulty
             bool practice = false;
             Console.WriteLine("Do you want hints on? Y/N");
             Input = Console.ReadLine();
@@ -35,24 +66,62 @@ public class QuizBowlGame
                 Console.WriteLine("Not an accepted input.\nEnter Y or N");
                 goto SetMode;
             }
-        // Question
+            Console.WriteLine("\r");
+        // Questions
         Run:
             ConceptGroup concept = concepts[rand.Next(0, concepts.Length)];
             
             QuestionGroup group = concept.groups[rand.Next(0, concept.groups.Length)];
+        AskQuestion:
             group.Print();
             for (int i = 0; i < group.Length(); i++){
                 string Answer = group.questions[rand.Next(0, group.questions.Length)].Print(practice);
             	Input = Console.ReadLine();
-                CheckCommands(Input);
-            	if (Input.ToUpper() == Answer.ToUpper()){
-                    correct++;
-            	    Console.WriteLine($"Correct; \n\tScore:{correct}|{wrong}");
-            	}else{
-                    wrong++;
-            	    Console.WriteLine($"Wrg; Correct: {Answer} \n\tScore:{correct}|{wrong}");
-            	}
+                // Check commands
+                switch (Input.ToUpper()){
+                    case "SKIP": // Skip the current category
+                        goto Run;
+                    case "EXIT": // Exit the program
+                        run = false;
+                        break;
+                    case "HELP": // List the commands
+                        Help();
+                        break;
+                    case "LIST": // List the questions
+                        ListQuestions(concepts);
+                        break;
+                    case "DIFF": // Set the difficulty
+                        goto SetMode;
+                    case "GOTO": // Search for a question
+                        ListQuestions(concepts);
+                        int conceptID, groupID;
+                        GetIDs(out conceptID, out groupID);
+                        // Check if valid id then set.
+                        if (conceptID < concepts.Length && conceptID >= 0){
+                            concept = concepts[conceptID];
+                        } else {
+                            Console.WriteLine("Not a listed concept group.");
+                            goto AskQuestion;
+                        }
+                        if (groupID < concept.groups.Length && groupID >= 0){
+                            group = concept.groups[groupID];
+                        } else {
+                            Console.WriteLine("Not a listed question group.");
+                        }
+                        goto AskQuestion;
+                    default: // Handles answering the question
+                        if (Input.ToUpper() == Answer.ToUpper()){
+                            correct++;
+                            Console.WriteLine($"Correct; \n\tScore:{correct}|{wrong}");
+                        }else{
+                            wrong++;
+                            Console.WriteLine($"Wrg; Correct: {Answer} \n\tScore:{correct}|{wrong}");
+                        }
+                        break;
+                }
             }
-    	goto Run;
+        if (run){
+    	    goto Run;
+        }
     }
 }
