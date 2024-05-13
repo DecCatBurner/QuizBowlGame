@@ -1,5 +1,6 @@
 // Game for Quiz Bowl Practice
-using System;
+using System.Text.Json;
+
 
 // Game
 public class QuizBowlGame
@@ -50,6 +51,9 @@ public class QuizBowlGame
             new CGMedia(),
             new CGMath()
         };
+        string json1 = File.ReadAllText(@"QuizBowlTextGame/ClassJson/CGMath.json");
+        concepts[2] = JsonSerializer.Deserialize<ConceptGroup>(json1);
+        
         bool run = true;
         var rand = new Random();
         int correct = 0, wrong = 0;
@@ -74,7 +78,7 @@ public class QuizBowlGame
             QuestionGroup group = concept.groups[rand.Next(0, concept.groups.Length)];
         AskQuestion:
             group.Print();
-            for (int i = 0; i < group.Length(); i++){
+            for (int i = 0; i < group.length; i++){
                 string Answer = group.questions[rand.Next(0, group.questions.Length)].Print(practice);
             	Input = Console.ReadLine();
                 // Check commands

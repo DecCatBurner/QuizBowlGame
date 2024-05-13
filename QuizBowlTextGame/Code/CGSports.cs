@@ -1,4 +1,4 @@
-public class LRndNBATeams : LightningRound{
+public class LRndNBATeams : QuestionGroup{
     public LRndNBATeams() : base(){
         theme = "NBA Teams";
         rule = "Finish the name";
@@ -94,6 +94,7 @@ public class LRndNBATeams : LightningRound{
                 "Spurs",
                 "SANd")
         };
+        length = 10;
     }
 }
 

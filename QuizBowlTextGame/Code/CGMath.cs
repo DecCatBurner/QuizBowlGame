@@ -1,4 +1,4 @@
-public class LRndBinaryAddition : LightningRound{
+public class LRndBinaryAddition : QuestionGroup{
     public LRndBinaryAddition() : base(){
         theme = "Binary Addition";
         rule = "Answer in binary form\nDon't include leading 0s";
@@ -38,6 +38,7 @@ public class LRndBinaryAddition : LightningRound{
                 "100010",
                 "1 + 1 = 10, 0 + 0 = 00, 1 + 0 = 01\nWrite 0100 as 100")
         };
+        length = 10;
     }
 }
 

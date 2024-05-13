@@ -3,7 +3,6 @@ C:\GitHub\QuizBowlGame\QuizBowlTextGame\bin\Debug\net7.0\QuizBowlTextGame.deps.j
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\bin\Debug\net7.0\QuizBowlTextGame.runtimeconfig.json
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\bin\Debug\net7.0\QuizBowlTextGame.dll
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\bin\Debug\net7.0\QuizBowlTextGame.pdb
-C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.csproj.AssemblyReference.cache
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.GeneratedMSBuildEditorConfig.editorconfig
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.AssemblyInfoInputs.cache
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.AssemblyInfo.cs
@@ -13,3 +12,4 @@ C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\refint\QuizBowlTextGame
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.pdb
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.genruntimeconfig.cache
 C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\ref\QuizBowlTextGame.dll
+C:\GitHub\QuizBowlGame\QuizBowlTextGame\obj\Debug\net7.0\QuizBowlTextGame.sourcelink.json
