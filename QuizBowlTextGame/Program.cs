@@ -61,13 +61,14 @@ public class QuizBowlGame
     {
         // Interface vars
         ConceptGroup[] concepts = new ConceptGroup[] {
-            new CGSports(),
-            new CGMedia(),
-            new CGMath()
+            JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGSports.json")),
+            JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGMath.json")),
+            new CGMedia()
         };
         //File.OpenRead("./QuizBowlTextGame/ClassJson/CGMath.json");
-        string json1 = File.ReadAllText("./QuizBowlTextGame/ClassJson/CGMath.json");
-        concepts[2] = JsonSerializer.Deserialize<ConceptGroup>(json1);
+        //string json1 = File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGSports.json");
+        //concepts[0] = JsonSerializer.Deserialize<ConceptGroup>(json1);
+        //Console.WriteLine(JsonSerializer.Serialize<ConceptGroup>(concepts[0]));
         
         bool run = true;
         var rand = new Random();

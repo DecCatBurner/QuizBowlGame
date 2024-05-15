@@ -3,16 +3,17 @@
     "groups": [
         {
             "theme": "Laws",
+            "rule" : "Go in traditional order.",
             "questions": [
                 { "Question": "What is the Law of Cosines?", "Answer": "c^2 = a^2 + b^2 - 2abCosC", "Hint": "Starts with Pythagorous." },
                 { "Question": "What is the Law of Sines?", "Answer": "a/SinA = b/SinB = c/SinC", "Hint": "a/SinA" },
                 { "Question": "What is the Pythagorean Theorem?", "Answer": "a^2 + b^2 = c^2", "Hint": "That triangle thing." }
             ],
-            "length": 1,
-            "rule" : null
+            "length": 1
         },
         {
             "theme": "Binary Addition",
+            "rule" : "Answer in binary form\nDon't include leading 0s (Write 0100 as 100)",
             "questions": [
                 { "Question": "1010 + 101", "Answer":"1111", "Hint": "Remember 1 = 01." },
                 { "Question": "1111 + 11", "Answer": "10010", "Hint": "Remember 1 = 01." },
@@ -26,8 +27,7 @@
                 { "Question":"101010 + 10011", "Answer": "111101", "Hint": "Remember 1 = 01." },
                 { "Question":"11111 + 11", "Answer": "100010", "Hint": "Remember 1 = 01." }
             ],
-            "length": 10,
-            "rule" : "Answer in binary form\nDon't include leading 0s (Write 0100 as 100)"
+            "length": 10
         }
     ]
 }

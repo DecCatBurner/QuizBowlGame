@@ -1,0 +1,40 @@
+{
+    "concept":"Sports",
+    "groups":[
+        {
+            "theme":"NBA Teams",
+            "rule":"Finish the name",
+            "questions":[
+                {"Question":"Boston","Answer":"Celtics","Hint":"Dryads"},
+                {"Question":"Brooklyn","Answer":"Nets","Hint":"Lake Brook"},
+                {"Question":"New York","Answer":"Knicks","Hint":"Nick"},
+                {"Question":"Philadelphia","Answer":"76ers","Hint":"Numbers"},
+                {"Question":"Toronto","Answer":"Raptors","Hint":"Dinos"},
+                {"Question":"Chicago","Answer":"Bulls","Hint":"Cow"},
+                {"Question":"Cleveland","Answer":"Cavaliers","Hint":"Mounted Pike People"},
+                {"Question":"Detroit","Answer":"Pistons","Hint":"Cars"},
+                {"Question":"Indiana","Answer":"Pacers","Hint":"Pesos"},
+                {"Question":"Milwaukee","Answer":"Bucks","Hint":"Money"},
+                {"Question":"Atlanta","Answer":"Hawks","Hint":"Bird"},
+                {"Question":"Charlotte","Answer":"Hornets","Hint":"Insect"},
+                {"Question":"Miami","Answer":"Heat","Hint":"Not \u0022Mild\u0022ami"},
+                {"Question":"Orlando","Answer":"Magic","Hint":"In Disney"},
+                {"Question":"Washington","Answer":"Wizards","Hint":"Cool Hat"},
+                {"Question":"Denver","Answer":"Nuggets","Hint":"Dinner"},
+                {"Question":"Minnesota","Answer":"Timberwolves","Hint":"Lumber"},
+                {"Question":"Oklahoma City","Answer":"Thunder","Hint":"If you get this wrong... crackle!"},
+                {"Question":"Portland","Answer":"Trail Blazers","Hint":"Who makes a new port?"},
+                {"Question":"Utah","Answer":"Jazz","Hint":"Do U TAHlike..."},
+                {"Question":"Golden State","Answer":"Warriors","Hint":"Fighting Gold"},
+                {"Question":"LA","Answer":"Clippers","Hint":"L\tA"},
+                {"Question":"Los Angeles","Answer":"Lakers","Hint":"Pretty Pool"},
+                {"Question":"Phoenix","Answer":"Suns","Hint":"Bird of"},
+                {"Question":"Sacramento","Answer":"Kings","Hint":"Bible Book"},
+                {"Question":"Dallas","Answer":"Mavericks","Hint":"Top Gun"},
+                {"Question":"Houston","Answer":"Rockets","Hint":"NASA has a ton"},
+                {"Question":"Memphis","Answer":"Grizzes","Hint":"Men can\u0027t bare it"},
+                {"Question":"New Orleans","Answer":"Pelicans","Hint":"See birb"},
+                {"Question":"San Antonio","Answer":"Spurs","Hint":"SANd"}
+            ],
+            "length":10}]
+    }

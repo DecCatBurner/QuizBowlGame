@@ -1,16 +1,24 @@
 // Question code
 using System.Diagnostics.CodeAnalysis;
+using System.Dynamic;
+using System.Text.Json.Serialization;
 
 public interface QAImpliment{
     public string Print(bool pract);
 }
 public class QnA : QAImpliment{ // For Question and Answer
-    public string Question = "", Answer = "", Hint = "";
+    public string Question {get; set;}
+    public string Answer {get; set;}
+    public string Hint {get; set;}
     
-    public QnA(string Q, string A, string H){
-        Question = Q;
-        Answer = A;
-        Hint = H;
+    [JsonConstructor]
+    public QnA() {
+        int i = 0;
+    }
+    public QnA(string question1, string answer1, string hint1){
+        Question = question1;
+        Answer = answer1;
+        Hint = hint1;
     }
     
     public string Print(bool pract){
@@ -23,11 +31,23 @@ public class QnA : QAImpliment{ // For Question and Answer
 }
 // Question groups
 public class QuestionGroup{
-    public string theme;
-    [AllowNull] public string rule;
-    public QnA[] questions = {new QnA("", "", "")};
-    public int length;
+    public string theme {get; set;}
+    [AllowNull] public string rule {get; set;}
+    public QnA[] questions {get; set;}
+    public int length {get; set;}
     
+    [JsonConstructor]
+    public QuestionGroup() {
+        length = 1;
+    }
+
+    public QuestionGroup(string theme1, string rule1, QnA[] questions1, int length1) {
+        theme = theme1;
+        rule = rule1;
+        questions = questions1;
+        length = length1;
+    }
+
     public QuestionGroup(bool lightning = false) {
         theme = "";
         if (lightning) {
@@ -53,9 +73,15 @@ public class QuestionGroup{
 
 // Concept Groups
 public class ConceptGroup{
-    public string concept = "";
-    public QuestionGroup[] groups;
+    public string concept {get; set;}
+    public QuestionGroup[] groups {get; set;}
     
+    
+    public ConceptGroup(string concept1, QuestionGroup[] groups1){
+        concept = concept1;
+        groups = groups1;
+    }
+    [JsonConstructor]
     public ConceptGroup(){
         concept = "";
         groups = new QuestionGroup[] {new QuestionGroup(), new QuestionGroup()};
