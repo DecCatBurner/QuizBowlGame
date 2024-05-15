@@ -5,6 +5,9 @@ using System.Text.Json;
 // Game
 public class QuizBowlGame
 {
+    public static ConceptGroup AddConcept(string fileName){
+        return JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText(Path.Combine("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson", fileName)));
+    }
     public static void Help(){
         Console.WriteLine("____COMMANDS____\nSKIP\tSkip to a different subject and question.\nEXIT\tExit the program.\nLIST\tList all questions.\nGOTO\tGo to a certian question.\nDIFF\tChange difficulty.\n");
     }
@@ -61,14 +64,10 @@ public class QuizBowlGame
     {
         // Interface vars
         ConceptGroup[] concepts = new ConceptGroup[] {
-            JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGSports.json")),
-            JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGMath.json")),
+            AddConcept("CGMath.json"),
+            AddConcept("CGSports.json"),
             new CGMedia()
         };
-        //File.OpenRead("./QuizBowlTextGame/ClassJson/CGMath.json");
-        //string json1 = File.ReadAllText("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson/CGSports.json");
-        //concepts[0] = JsonSerializer.Deserialize<ConceptGroup>(json1);
-        //Console.WriteLine(JsonSerializer.Serialize<ConceptGroup>(concepts[0]));
         
         bool run = true;
         var rand = new Random();
