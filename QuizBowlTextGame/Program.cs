@@ -42,6 +42,20 @@ public class QuizBowlGame
             }
         }
     }
+    public static void GetLength(out int l) {
+        bool idset = false;
+        l = 0;
+        while (!idset){
+            Console.WriteLine("\nEnter how long you want to stay in the group.");
+            string s = Console.ReadLine();
+            if (int.TryParse(s, out l)) {
+                idset = true;
+            }
+            else {
+                Console.WriteLine("Please enter an integer.");
+            }
+        }
+    }
 
     public static void Main(string[] args)
     {
@@ -51,12 +65,13 @@ public class QuizBowlGame
             new CGMedia(),
             new CGMath()
         };
-        string json1 = File.ReadAllText(@"QuizBowlTextGame/ClassJson/CGMath.json");
+        //File.OpenRead("./QuizBowlTextGame/ClassJson/CGMath.json");
+        string json1 = File.ReadAllText("./QuizBowlTextGame/ClassJson/CGMath.json");
         concepts[2] = JsonSerializer.Deserialize<ConceptGroup>(json1);
         
         bool run = true;
         var rand = new Random();
-        int correct = 0, wrong = 0;
+        int correct = 0, wrong = 0, lengthRun = 1;
         string Input = " ";
         // Initial statements
         Console.WriteLine("____Quiz Bowler____\n\u00A9 2024 DecCatBurner\nFor a list of commands type \"help\"");
@@ -76,9 +91,11 @@ public class QuizBowlGame
             ConceptGroup concept = concepts[rand.Next(0, concepts.Length)];
             
             QuestionGroup group = concept.groups[rand.Next(0, concept.groups.Length)];
+
+            lengthRun = group.length;
         AskQuestion:
             group.Print();
-            for (int i = 0; i < group.length; i++){
+            for (int i = 0; i < lengthRun; i++){
                 string Answer = group.questions[rand.Next(0, group.questions.Length)].Print(practice);
             	Input = Console.ReadLine();
                 // Check commands
@@ -96,6 +113,9 @@ public class QuizBowlGame
                         break;
                     case "DIFF": // Set the difficulty
                         goto SetMode;
+                    case "LENGTH": // Set the length
+                        GetLength(out lengthRun);
+                        break;
                     case "GOTO": // Search for a question
                         ListQuestions(concepts);
                         int conceptID, groupID;

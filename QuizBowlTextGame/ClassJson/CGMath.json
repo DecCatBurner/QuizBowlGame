@@ -4,9 +4,9 @@
         {
             "theme": "Laws",
             "questions": [
-                { "Question": "What is the Law of Cosines", "Answer": "c^2 = a^2 + b^2 - 2abCosC" },
-                { "Question": "What is the Law of Sines", "Answer": "a/SinA = b/SinB = c/SinC" },
-                { "Question": "What is the Pythagorean Theorem", "Answer": "a^2 + b^2 = c^2"}
+                { "Question": "What is the Law of Cosines?", "Answer": "c^2 = a^2 + b^2 - 2abCosC", "Hint": "Starts with Pythagorous." },
+                { "Question": "What is the Law of Sines?", "Answer": "a/SinA = b/SinB = c/SinC", "Hint": "a/SinA" },
+                { "Question": "What is the Pythagorean Theorem?", "Answer": "a^2 + b^2 = c^2", "Hint": "That triangle thing." }
             ],
             "length": 1,
             "rule" : null
@@ -14,17 +14,17 @@
         {
             "theme": "Binary Addition",
             "questions": [
-                { "Question": "1010 + 101", "Answer":"1111" },
-                { "Question": "1111 + 11", "Answer": "10010" },
-                { "Question": "1010 + 11", "Answer": "1101" },
-                { "Question": "1011 + 1101", "Answer": "11000" },
-                { "Question": "111 + 110110", "Answer": "111101" },
-                { "Question": "101110 + 11101", "Answer": "1001011" },
-                { "Question": "11100 + 100100", "Answer": "1000000" },
-                { "Question": "101010 + 110011", "Answer": "1011101" },
-                { "Question": "110011 + 11001", "Answer": "1001100" },
-                { "Question":"101010 + 10011", "Answer": "111101" },
-                { "Question":"11111 + 11", "Answer": "100010" }
+                { "Question": "1010 + 101", "Answer":"1111", "Hint": "Remember 1 = 01." },
+                { "Question": "1111 + 11", "Answer": "10010", "Hint": "Remember 1 = 01." },
+                { "Question": "1010 + 11", "Answer": "1101", "Hint": "Remember 1 = 01." },
+                { "Question": "1011 + 1101", "Answer": "11000", "Hint": "Remember 1 = 01." },
+                { "Question": "111 + 110110", "Answer": "111101", "Hint": "Remember 1 = 01." },
+                { "Question": "101110 + 11101", "Answer": "1001011", "Hint": "Remember 1 = 01." },
+                { "Question": "11100 + 100100", "Answer": "1000000", "Hint": "Remember 1 = 01." },
+                { "Question": "101010 + 110011", "Answer": "1011101", "Hint": "Remember 1 = 01." },
+                { "Question": "110011 + 11001", "Answer": "1001100", "Hint": "Remember 1 = 01." },
+                { "Question":"101010 + 10011", "Answer": "111101", "Hint": "Remember 1 = 01." },
+                { "Question":"11111 + 11", "Answer": "100010", "Hint": "Remember 1 = 01." }
             ],
             "length": 10,
             "rule" : "Answer in binary form\nDon't include leading 0s (Write 0100 as 100)"
