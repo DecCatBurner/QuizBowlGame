@@ -1,0 +1,13 @@
+{
+    "concept": "History",
+    "catagories": [
+        {
+            "theme": "WWII",
+            "rule" : "Answer the question.",
+            "questions": [
+                { "Question": "In 1820, this U.S. naval commissioner was killed in a duel. Which naval officer had earned distinction in the War of 1812 when his ship, the Unites States, captured the HMS Macedonian?", "Answer": "Stephen Decatur", "Hint": "King Catter." }
+            ],
+            "length": 1
+        }
+    ]
+}

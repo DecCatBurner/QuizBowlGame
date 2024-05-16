@@ -28,6 +28,14 @@
                 { "Question":"11111 + 11", "Answer": "100010", "Hint": "Remember 1 = 01." }
             ],
             "length": 10
+        },
+        {
+            "theme": "Variables",
+            "rule": "Put in inproper fraction format.",
+            "questions": [
+                {"Question": "Solve the following equation for x: 3(5x – 7) = 2(4x + 3)", "Answer": "x = 27/7", "Hint": "x = n/m"}
+            ],
+            "length": 1
         }
     ]
 }

@@ -71,11 +71,15 @@ public class QuizBowlGame
 
     public static void Main(string[] args)
     {
+        Console.Title = "____Quiz Bowler____";
+        Console.BackgroundColor = ConsoleColor.DarkBlue;
+        Console.ForegroundColor = ConsoleColor.Cyan;
         // Interface vars
         ConceptGroup[] concepts = new ConceptGroup[] {
             AddConcept("CGMath.json"),
             AddConcept("CGSports.json"),
-            AddConcept("CGMedia.json")
+            AddConcept("CGMedia.json"),
+            AddConcept("CGHistory.json")
         };
         
         bool run = true;
@@ -112,8 +116,7 @@ public class QuizBowlGame
                     case "SKIP": // Skip the current category
                         goto Run;
                     case "EXIT": // Exit the program
-                        run = false;
-                        break;
+                        goto Exit;
                     case "HELP": // List the commands
                         Help();
                         break;
@@ -156,5 +159,7 @@ public class QuizBowlGame
         if (run){
     	    goto Run;
         }
+        Exit:
+            Console.WriteLine("Exited Successfully.");
     }
 }
