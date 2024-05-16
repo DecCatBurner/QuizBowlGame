@@ -66,7 +66,7 @@ public class QuizBowlGame
         ConceptGroup[] concepts = new ConceptGroup[] {
             AddConcept("CGMath.json"),
             AddConcept("CGSports.json"),
-            new CGMedia()
+            AddConcept("CGMedia.json")
         };
         
         bool run = true;

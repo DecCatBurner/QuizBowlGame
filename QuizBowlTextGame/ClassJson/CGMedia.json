@@ -1,0 +1,38 @@
+{
+    "concept": "Media",
+    "groups": [
+        {
+            "theme": "Authors",
+            "rule" : "Name the author.",
+            "questions": [
+                { "Question": "This American author was best-known for his highly popular westerns portraying frontier life. Which author's novel Hondo was made into a movie starring John Wayne in 1954?",
+                "Answer": "Louis L'Amour",
+                "Hint": "F' Four" }
+            ],
+            "length": 1
+        },
+        {
+            "theme": "Poems",
+            "rule" : "Name the poem.",
+            "questions": [
+                { "Question": "The subject of this 1681 poetic satire by John Dryden was the Exclusion Crisis in England. Which poem takes its title from a story in the Bible about a son of David and the friend who persuaded him to rebel against his father?",
+                "Answer": "Absalom and Achitophel",
+                "Hint": "2 Samuel"},
+                { "Question": "In one play by Shakespeare, this character meets defeat at the Battle of Actium. Which character also gives a funeral oration that leads a crowd to riot in an earlier play?",
+                "Answer": "Mark Antony",
+                "Hint": "Becomes Augustus"}
+            ],
+            "length": 1
+        },
+        {
+            "theme": "Books",
+            "rule" : "Name the book.",
+            "questions": [
+                { "Question": "This 1859 novel tells the story of a carpenter in love with a single woman who has a child with another man. What is the title of this novel by George Eliot?",
+                "Answer": "Adam Bede",
+                "Hint": "Man Body"}
+            ],
+            "length": 1
+        }
+    ]
+}
