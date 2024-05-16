@@ -30,7 +30,8 @@
             "questions": [
                 { "Question": "This 1859 novel tells the story of a carpenter in love with a single woman who has a child with another man. What is the title of this novel by George Eliot?",
                 "Answer": "Adam Bede",
-                "Hint": "Man Body"}
+                "Hint": "Man Body"},
+                {"Question": "What is the English Name for the first book in JK Rowling's Harry Potter titled in America Sorcerer's Stone.", "Answer": "Philosopher's Stone", "Hint": "Stoner"}
             ],
             "length": 1
         }

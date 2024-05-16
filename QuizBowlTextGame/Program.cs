@@ -9,7 +9,16 @@ public class QuizBowlGame
         return JsonSerializer.Deserialize<ConceptGroup>(File.ReadAllText(Path.Combine("C:/GitHub/QuizBowlGame/QuizBowlTextGame/ClassJson", fileName)));
     }
     public static void Help(){
-        Console.WriteLine("____COMMANDS____\nSKIP\tSkip to a different subject and question.\nEXIT\tExit the program.\nLIST\tList all questions.\nGOTO\tGo to a certian question.\nDIFF\tChange difficulty.\n");
+        string[] cmds = {"____COMMANDS____", 
+            "SKIP\tSkip to a different subject and question.", 
+            "EXIT\tExit the program.",
+            "LIST\tList all questions.",
+            "LENGTH\tSet how many questions of a certain catagory to run.",
+            "GOTO\tGo to a certian question.",
+            "DIFF\tChange difficulty."};
+        foreach (string s in cmds) {
+            Console.WriteLine(s);
+        }
     }
     public static void ListQuestions(ConceptGroup[] concepts){
         for (int i = 0; i < concepts.Length; i++){
