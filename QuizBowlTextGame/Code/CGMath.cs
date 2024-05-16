@@ -1,4 +1,4 @@
-public class LRndBinaryAddition : QuestionGroup{
+public class LRndBinaryAddition : QuestionCatagory{
     public LRndBinaryAddition() : base(){
         theme = "Binary Addition";
         rule = "Answer in binary form\nDon't include leading 0s";
@@ -45,6 +45,6 @@ public class LRndBinaryAddition : QuestionGroup{
 public class CGMath : ConceptGroup{
     public CGMath(){
         concept = "Math";
-        groups = new QuestionGroup[] {new LRndBinaryAddition()};
+        catagories = new QuestionCatagory[] {new LRndBinaryAddition()};
     }
 }

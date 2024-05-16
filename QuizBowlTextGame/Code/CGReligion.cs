@@ -1,4 +1,4 @@
-public class Bible : QuestionGroup{
+public class Bible : QuestionCatagory{
     public Bible() : base(){
         theme = "Bible";
         questions = new QnA[] {
@@ -12,6 +12,6 @@ public class Bible : QuestionGroup{
 public class CGReligion : ConceptGroup{
     public CGReligion(){
         concept = "Religions";
-        groups = new QuestionGroup[] {new Bible()};
+        catagories = new QuestionCatagory[] {new Bible()};
     }
 }

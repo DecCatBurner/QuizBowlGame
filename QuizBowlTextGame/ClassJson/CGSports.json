@@ -1,6 +1,6 @@
 {
     "concept":"Sports",
-    "groups":[
+    "catagories":[
         {
             "theme":"NBA Teams",
             "rule":"Finish the name",

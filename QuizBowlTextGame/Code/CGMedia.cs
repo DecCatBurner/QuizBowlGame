@@ -1,4 +1,4 @@
-public class Books : QuestionGroup{
+public class Books : QuestionCatagory{
     public Books() : base(){
         theme = "Books";
         questions = new QnA[] {
@@ -9,7 +9,7 @@ public class Books : QuestionGroup{
     }
 }
 
-public class Authors : QuestionGroup{
+public class Authors : QuestionCatagory{
     public Authors() : base(){
         theme = "Authors";
         questions = new QnA[] {
@@ -20,7 +20,7 @@ public class Authors : QuestionGroup{
     }
 }
 
-public class Poems : QuestionGroup{
+public class Poems : QuestionCatagory{
     public Poems() : base(){
         theme = "Poems";
         questions = new QnA[] {
@@ -37,6 +37,6 @@ public class Poems : QuestionGroup{
 public class CGMedia : ConceptGroup{
     public CGMedia(){
         concept = "Media";
-        groups = new QuestionGroup[] {new Books(), new Authors(), new Poems()};
+        catagories = new QuestionCatagory[] {new Books(), new Authors(), new Poems()};
     }
 }

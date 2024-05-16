@@ -26,13 +26,13 @@ public class QuizBowlGame
             concepts[i].WriteData();
         }
     }
-    public static void GetIDs(out int conceptID, out int groupID){
-        conceptID = groupID = 0; // Just eliminates errors
+    public static void GetIDs(out int conceptID, out int catagoryID){
+        conceptID = catagoryID = 0; // Just eliminates errors
         // Prepares vars for use
         bool idset = false;
         string input;
         int inputInt;
-        while (!idset){ // Gets the concept group ID
+        while (!idset){ // Gets the concept catagory ID
             Console.WriteLine("\nEnter the numeric id of the general concept.");
             input = Console.ReadLine();
             if (int.TryParse(input, out inputInt)){
@@ -43,12 +43,12 @@ public class QuizBowlGame
             }
         }
         idset = false; // Reuse var
-        while (!idset){ // Gets the question group ID
-            Console.WriteLine("\nEnter the numeric id of the question grouping.");
+        while (!idset){ // Gets the question catagory ID
+            Console.WriteLine("\nEnter the numeric id of the question catagorying.");
             input = Console.ReadLine();
             if (int.TryParse(input, out inputInt)){
                 idset = true;
-                groupID = inputInt;
+                catagoryID = inputInt;
             } else {
                 Console.WriteLine("Please enter an integer.");
             }
@@ -58,7 +58,7 @@ public class QuizBowlGame
         bool idset = false;
         l = 0;
         while (!idset){
-            Console.WriteLine("\nEnter how long you want to stay in the group.");
+            Console.WriteLine("\nEnter how long you want to stay in the catagory.");
             string s = Console.ReadLine();
             if (int.TryParse(s, out l)) {
                 idset = true;
@@ -99,13 +99,13 @@ public class QuizBowlGame
         Run:
             ConceptGroup concept = concepts[rand.Next(0, concepts.Length)];
             
-            QuestionGroup group = concept.groups[rand.Next(0, concept.groups.Length)];
+            QuestionCatagory catagory = concept.catagories[rand.Next(0, concept.catagories.Length)];
 
-            lengthRun = group.length;
+            lengthRun = catagory.length;
         AskQuestion:
-            group.Print();
+            catagory.Print();
             for (int i = 0; i < lengthRun; i++){
-                string Answer = group.questions[rand.Next(0, group.questions.Length)].Print(practice);
+                string Answer = catagory.questions[rand.Next(0, catagory.questions.Length)].Print(practice);
             	Input = Console.ReadLine();
                 // Check commands
                 switch (Input.ToUpper()){
@@ -127,8 +127,8 @@ public class QuizBowlGame
                         break;
                     case "GOTO": // Search for a question
                         ListQuestions(concepts);
-                        int conceptID, groupID;
-                        GetIDs(out conceptID, out groupID);
+                        int conceptID, catagoryID;
+                        GetIDs(out conceptID, out catagoryID);
                         // Check if valid id then set.
                         if (conceptID < concepts.Length && conceptID >= 0){
                             concept = concepts[conceptID];
@@ -136,10 +136,10 @@ public class QuizBowlGame
                             Console.WriteLine("Not a listed concept group.");
                             goto AskQuestion;
                         }
-                        if (groupID < concept.groups.Length && groupID >= 0){
-                            group = concept.groups[groupID];
+                        if (catagoryID < concept.catagories.Length && catagoryID >= 0){
+                            catagory = concept.catagories[catagoryID];
                         } else {
-                            Console.WriteLine("Not a listed question group.");
+                            Console.WriteLine("Not a listed question catagory.");
                         }
                         goto AskQuestion;
                     default: // Handles answering the question

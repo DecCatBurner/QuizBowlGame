@@ -1,6 +1,6 @@
 {
     "concept": "Media",
-    "groups": [
+    "catagories": [
         {
             "theme": "Authors",
             "rule" : "Name the author.",

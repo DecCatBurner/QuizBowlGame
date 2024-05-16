@@ -29,26 +29,26 @@ public class QnA : QAImpliment{ // For Question and Answer
         return Answer;
     }
 }
-// Question groups
-public class QuestionGroup{
+// Question catagorys
+public class QuestionCatagory{
     public string theme {get; set;}
     [AllowNull] public string rule {get; set;}
     public QnA[] questions {get; set;}
     public int length {get; set;}
     
     [JsonConstructor]
-    public QuestionGroup() {
+    public QuestionCatagory() {
         length = 1;
     }
 
-    public QuestionGroup(string theme1, string rule1, QnA[] questions1, int length1) {
+    public QuestionCatagory(string theme1, string rule1, QnA[] questions1, int length1) {
         theme = theme1;
         rule = rule1;
         questions = questions1;
         length = length1;
     }
 
-    public QuestionGroup(bool lightning = false) {
+    public QuestionCatagory(bool lightning = false) {
         theme = "";
         if (lightning) {
             rule = "";
@@ -74,23 +74,23 @@ public class QuestionGroup{
 // Concept Groups
 public class ConceptGroup{
     public string concept {get; set;}
-    public QuestionGroup[] groups {get; set;}
+    public QuestionCatagory[] catagories {get; set;}
     
     
-    public ConceptGroup(string concept1, QuestionGroup[] groups1){
+    public ConceptGroup(string concept1, QuestionCatagory[] catagorys1){
         concept = concept1;
-        groups = groups1;
+        catagories = catagorys1;
     }
     [JsonConstructor]
     public ConceptGroup(){
         concept = "";
-        groups = new QuestionGroup[] {new QuestionGroup(), new QuestionGroup()};
+        catagories = new QuestionCatagory[] {new QuestionCatagory(), new QuestionCatagory()};
     }
 
     public void WriteData(){
         Console.WriteLine($"\nConcept: {concept}");
-        for(int i = 0; i < groups.Length; i++){
-            Console.WriteLine($"\t{i}.\t{groups[i].theme}");
+        for(int i = 0; i < catagories.Length; i++){
+            Console.WriteLine($"\t{i}.\t{catagories[i].theme}");
         }
     }
 }

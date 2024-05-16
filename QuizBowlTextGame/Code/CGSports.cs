@@ -1,4 +1,4 @@
-public class LRndNBATeams : QuestionGroup{
+public class LRndNBATeams : QuestionCatagory{
     public LRndNBATeams() : base(){
         theme = "NBA Teams";
         rule = "Finish the name";
@@ -101,6 +101,6 @@ public class LRndNBATeams : QuestionGroup{
 public class CGSports : ConceptGroup{
     public CGSports(){
         concept = "Sports";
-        groups = new QuestionGroup[] {new LRndNBATeams()};
+        catagories = new QuestionCatagory[] {new LRndNBATeams()};
     }
 }
