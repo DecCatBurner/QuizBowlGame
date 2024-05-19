@@ -6,8 +6,8 @@
             "rule" : "Name the author.",
             "questions": [
                 { "Question": "This American author was best-known for his highly popular westerns portraying frontier life. Which author's novel Hondo was made into a movie starring John Wayne in 1954?",
-                "Answer": "Louis L'Amour",
-                "Hint": "F' Four" }
+                "Answer": "L'Amour",
+                "Hint": "Louis" }
             ],
             "length": 1
         },
@@ -19,8 +19,8 @@
                 "Answer": "Absalom and Achitophel",
                 "Hint": "2 Samuel"},
                 { "Question": "In one play by Shakespeare, this character meets defeat at the Battle of Actium. Which character also gives a funeral oration that leads a crowd to riot in an earlier play?",
-                "Answer": "Mark Antony",
-                "Hint": "Becomes Augustus"}
+                "Answer": "Antony",
+                "Hint": "Mark"}
             ],
             "length": 1
         },
@@ -29,11 +29,25 @@
             "rule" : "Name the book.",
             "questions": [
                 { "Question": "This 1859 novel tells the story of a carpenter in love with a single woman who has a child with another man. What is the title of this novel by George Eliot?",
-                "Answer": "Adam Bede",
-                "Hint": "Man Body"},
+                "Answer": "Bede",
+                "Hint": "Adam"},
                 {"Question": "What is the English Name for the first book in JK Rowling's Harry Potter titled in America Sorcerer's Stone.", "Answer": "Philosopher's Stone", "Hint": "Stoner"}
             ],
             "length": 1
+        },
+        {
+            "theme": "Directors",
+            "rule" : "Name the director.",
+            "questions": [
+                { "Question": "The first film this man directed was Who’s That Knocking at My Door in 1967. Name this American film director of such classics as Taxi Driver, Raging Bull, The Aviator, and Goodfellas.",
+                "Answer": "Martin Scorsese",
+                "Hint": "Sounds magic"},
+                {"Question": "In 1966, this American playwright and director had a role as James Bond's nephew in the movie Casino Royale, the same year his play Don't Drink the Water appeared on Broadway. Which man went on to win an Academy Award for his screenplay for the movie Annie Hall?", 
+                "Answer": "Allen", 
+                "Hint": "Woody"}
+            ],
+            "length": 1
         }
-    ]
+    ],
+    "mathCheck": false
 }

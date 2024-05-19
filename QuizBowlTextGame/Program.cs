@@ -1,5 +1,6 @@
 // Game for Quiz Bowl Practice
 using System.Text.Json;
+using System.Collections;
 
 
 // Game
@@ -15,7 +16,8 @@ public class QuizBowlGame
             "LIST\tList all questions.",
             "LENGTH\tSet how many questions of a certain catagory to run.",
             "GOTO\tGo to a certian question.",
-            "DIFF\tChange difficulty."};
+            "DIFF\tChange difficulty.",
+            "DATA\tSee your user data for this run."};
         foreach (string s in cmds) {
             Console.WriteLine(s);
         }
@@ -79,12 +81,17 @@ public class QuizBowlGame
             AddConcept("CGMath.json"),
             AddConcept("CGSports.json"),
             AddConcept("CGMedia.json"),
+            AddConcept("CGScience.json"),
+            AddConcept("CGArt.json"),
             AddConcept("CGHistory.json")
         };
         
+        List<IVec3> questionsAnswered = new(); 
+        List<int> finishedConcepts = new();
+        IVec3 questionC;
         bool run = true;
         var rand = new Random();
-        int correct = 0, wrong = 0, lengthRun = 1;
+        int correct = 0, wrong = 0, lengthRun = 1, streak = 0, highStreak = 0;
         string Input = " ";
         // Initial statements
         Console.WriteLine("____Quiz Bowler____\n\u00A9 2024 DecCatBurner\nFor a list of commands type \"help\"");
@@ -101,19 +108,43 @@ public class QuizBowlGame
             Console.WriteLine("\r");
         // Questions
         Run:
-            ConceptGroup concept = concepts[rand.Next(0, concepts.Length)];
-            
-            QuestionCatagory catagory = concept.catagories[rand.Next(0, concept.catagories.Length)];
+            questionC.x = rand.Next(0, concepts.Length);
+            /*if (finishedConcepts.Contains(questionC.x)) {
+                goto Run;
+            }*/
+            ConceptGroup concept = concepts[questionC.x];
+            //int attemptCatagory = 0;
+        SetCatagory:
+            questionC.y = rand.Next(0, concept.catagories.Length);
+            /*for (int i = 0; i < concept.catagories.Length; i++){
+                if (i == questionC.y) {
+                    goto SetCatagory;
+                    attemptCatagory++;
+                }
+            }*/
+            QuestionCatagory catagory = concept.catagories[questionC.y];
+            //if (attemptCatagory == concept.catagories.Length) { goto Run; finishedConcepts.Add(questionC.x); }
 
             lengthRun = catagory.length;
         AskQuestion:
             catagory.Print();
             for (int i = 0; i < lengthRun; i++){
-                string Answer = catagory.questions[rand.Next(0, catagory.questions.Length)].Print(practice);
+                int attemptQuestion = 0;
+                questionC.z = rand.Next(0, catagory.questions.Length);
+                for (int j = 0; j < catagory.questions.Length; j++){
+                    if (j == questionC.z) {
+                        questionC.z = questionC.z++ % catagory.questions.Length;
+                        j = 0;
+                        attemptQuestion++;
+                        if (attemptQuestion > catagory.questions.Length) { j = catagory.questions.Length; }
+                    }
+                }
+                string Answer = catagory.questions[questionC.z].Print(practice);
             	Input = Console.ReadLine();
                 // Check commands
                 switch (Input.ToUpper()){
                     case "SKIP": // Skip the current category
+                        streak = 0;
                         goto Run;
                     case "EXIT": // Exit the program
                         goto Exit;
@@ -145,13 +176,20 @@ public class QuizBowlGame
                             Console.WriteLine("Not a listed question catagory.");
                         }
                         goto AskQuestion;
+                    case "DATA": // Set the length
+                        Console.WriteLine($"Correct: {correct}\nWrong: {wrong}\nCurrent Streak: {streak}\nHighest Streak: {highStreak}");
+                        break;
                     default: // Handles answering the question
+                        questionsAnswered.Add(new IVec3(questionC.x, questionC.y, questionC.z));
                         if (Input.ToUpper() == Answer.ToUpper()){
                             correct++;
-                            Console.WriteLine($"Correct; \n\tScore:{correct}|{wrong}");
+                            streak++;
+                            if (streak > highStreak) { highStreak = streak; }
+                            Console.WriteLine($"Correct. \n\tCorrect:{correct}|Wrong:{wrong}");
                         }else{
                             wrong++;
-                            Console.WriteLine($"Wrg; Correct: {Answer} \n\tScore:{correct}|{wrong}");
+                            streak = 0;
+                            Console.WriteLine($"Wrong. The correct answer is {Answer} \n\tCorrect:{correct}|Wrong:{wrong}");
                         }
                         break;
                 }

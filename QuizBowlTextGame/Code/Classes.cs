@@ -75,6 +75,7 @@ public class QuestionCatagory{
 public class ConceptGroup{
     public string concept {get; set;}
     public QuestionCatagory[] catagories {get; set;}
+    public bool mathCheck {get; set;}
     
     
     public ConceptGroup(string concept1, QuestionCatagory[] catagorys1){
@@ -92,5 +93,17 @@ public class ConceptGroup{
         for(int i = 0; i < catagories.Length; i++){
             Console.WriteLine($"\t{i}.\t{catagories[i].theme}");
         }
+    }
+}
+
+// Integer Vector for determining which questions have been answered
+
+public struct IVec3{
+    public int x, y, z;
+
+    public IVec3(int x1, int y1, int z1){
+        x = x1;
+        y = y1;
+        z = z1;
     }
 }

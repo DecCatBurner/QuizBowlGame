@@ -36,5 +36,8 @@
                 {"Question":"New Orleans","Answer":"Pelicans","Hint":"See birb"},
                 {"Question":"San Antonio","Answer":"Spurs","Hint":"SANd"}
             ],
-            "length":10}]
-    }
+            "length":10
+        }
+    ],
+    "mathCheck": false
+}

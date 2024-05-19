@@ -1,0 +1,19 @@
+{
+    "concept": "Science",
+    "catagories": [
+        {
+            "theme": "Biology",
+            "rule" : "Answer the question.",
+            "questions": [
+                { "Question": "These hormones include estrone, estradiol, and estriol. What is this class of hormone, produced by the Graafian follicles, that stimulates the development of secondary sex characteristics in females?", 
+                "Answer": "Estrogen", 
+                "Hint": "Hear a common theme" },
+                { "Question": "This term is used in botany for all offspring of the same plant born at about the same time or during the same growing season. What is the \"G\" term that also can be used to describe the life span of an individual plant?", 
+                "Answer": "Generation", 
+                "Hint": "Not group" }
+            ],
+            "length": 1
+        }
+    ],
+    "mathCheck": false
+}

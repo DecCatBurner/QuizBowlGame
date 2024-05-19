@@ -1,0 +1,26 @@
+{
+    "concept": "Art",
+    "catagories": [
+        {
+            "theme": "Artist",
+            "rule" : "Name the artist.",
+            "questions": [
+                { "Question": "After Peter Paul Rubens, this man was the most important Flemish painter of the 17th century. Which artist, known for his portraits, was named the principal painter of the court of King Charles I of England in 1632?", 
+                "Answer": "van Dyck", 
+                "Hint": "Anthony" }
+            ],
+            "length": 1
+        },
+        {
+            "theme": "Composer",
+            "rule" : "Name the composer.",
+            "questions": [
+                { "Question": "This English composer's works helped to revitalize British and American musical theater in the late 20th century. Which composer's works include Evita, Jesus Christ Superstar, and The Phantom of the Opera?", 
+                "Answer": "Webber", 
+                "Hint": "Andrew Lloyd" }
+            ],
+            "length": 1
+        }
+    ],
+    "mathCheck": false
+}
