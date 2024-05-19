@@ -25,13 +25,25 @@
             "length": 1
         },
         {
+            "theme": "Poets",
+            "rule" : "Name the poet.",
+            "questions": [
+                { "Question": "This Massachusetts poet was the most popular American poet of the 19th century. Which author was known for works such as The Song of Hiawatha and Paul Revere&#39;s Ride?",
+                "Answer": "Longfellow",
+                "Hint": "Henry Wadsworth"}
+            ],
+            "length": 1
+        },
+        {
             "theme": "Books",
             "rule" : "Name the book.",
             "questions": [
                 { "Question": "This 1859 novel tells the story of a carpenter in love with a single woman who has a child with another man. What is the title of this novel by George Eliot?",
                 "Answer": "Bede",
                 "Hint": "Adam"},
-                {"Question": "What is the English Name for the first book in JK Rowling's Harry Potter titled in America Sorcerer's Stone.", "Answer": "Philosopher's Stone", "Hint": "Stoner"}
+                {"Question": "What is the English Name for the first book in JK Rowling's Harry Potter titled in America \"Sorcerer's Stone.\"", 
+                "Answer": "Philosopher's Stone", 
+                "Hint": "Stoner"}
             ],
             "length": 1
         },
@@ -41,10 +53,20 @@
             "questions": [
                 { "Question": "The first film this man directed was Who’s That Knocking at My Door in 1967. Name this American film director of such classics as Taxi Driver, Raging Bull, The Aviator, and Goodfellas.",
                 "Answer": "Martin Scorsese",
-                "Hint": "Sounds magic"},
+                "Hint": "Martin"},
                 {"Question": "In 1966, this American playwright and director had a role as James Bond's nephew in the movie Casino Royale, the same year his play Don't Drink the Water appeared on Broadway. Which man went on to win an Academy Award for his screenplay for the movie Annie Hall?", 
                 "Answer": "Allen", 
                 "Hint": "Woody"}
+            ],
+            "length": 1
+        },
+        {
+            "theme": "Actors",
+            "rule" : "Name the actor.",
+            "questions": [
+                { "Question": "This long-time actor passed away in January 2022 after battling prostate cancer. Name this star of the 1960s in films such as \"Lilies of the Field,\" \"To Sir, With Love,\" and \"Guess Who's Coming to Dinner,\" the first Black man to win an Oscar.",
+                "Answer": "Poitier",
+                "Hint": "Sidney"}
             ],
             "length": 1
         }

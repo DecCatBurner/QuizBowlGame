@@ -33,12 +33,27 @@
             "theme": "Variables",
             "rule": "Put in inproper fraction format.",
             "questions": [
-                {"Question": "Solve the following equation for x: 3(5x – 7) = 2(4x + 3)", 
-                "Answer": "x = 27/7", 
-                "Hint": "x = n/m"},
+                {"Question": "Solve the following equation for x: 3(5x – 7) = 2(4x + 3). Don't repeat \"x =.\"", 
+                "Answer": "27/7", 
+                "Hint": "n/m"},
                 {"Question": "What is the measure of each of the interior angles in a regular heptagon, in degrees?", 
                 "Answer": "900/7", 
-                "Hint": "hept = 7"}
+                "Hint": "hept = 7"},
+                {"Question": "Divide the following binomials by rationalizing the denominator: (3 + sqrt2) / (2 - sqrt2). Express your answer as two separate terms.", 
+                "Answer": "4+5sqrt2/2", 
+                "Hint": "There can be no radicals in the demoninator. n+msqrtj/k"}
+            ],
+            "length": 1
+        },
+        {
+            "theme": "Calculus",
+            "rule": "Put answers in order of order.",
+            "questions": [
+                {
+                    "Question": "Find the limit as x approaches zero of the function: f(x) = (9x^4 - 12x + 72) / (3x^4 - 7x - 18).",
+                    "Answer": "-4",
+                    "Hint": "The answer is a constant."
+                }
             ],
             "length": 1
         }

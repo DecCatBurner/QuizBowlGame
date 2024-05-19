@@ -37,6 +37,17 @@
                 {"Question":"San Antonio","Answer":"Spurs","Hint":"SANd"}
             ],
             "length":10
+        },
+        {
+            "theme": "Golf",
+            "rule":"Answer the question.",
+            "questions":[
+                {"Question":"In 1934, the very first Masters golf tournament was held at the Augusta National Golf Club in this state. Which U.S. state annually hosts the Masters Tournament in April?",
+                "Answer": "Georgia",
+                "Hint": "Rhymes with the club."
+                }
+            ], 
+            "length": 1
         }
     ],
     "mathCheck": false

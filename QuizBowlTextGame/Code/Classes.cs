@@ -22,9 +22,9 @@ public class QnA : QAImpliment{ // For Question and Answer
     }
     
     public string Print(bool pract){
-        Console.WriteLine($"{Question}\n");
+        Console.WriteLine($"Question: {Question}\n");
         if (pract){ // Hint
-            Console.WriteLine($"{Hint}\n");
+            Console.WriteLine($"Hint: {Hint}\n");
         }
         return Answer;
     }

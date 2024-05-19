@@ -20,6 +20,16 @@
                 "Hint": "What goes on letters?" }
             ],
             "length": 1
+        },
+        {
+            "theme": "World History",
+            "rule" : "Answer the question.",
+            "questions": [
+                { "Question": "This man was the jeweler and goldsmith for the Russian imperial court under the rule of Alexander III. Which man is best known for his elaborate production of 50 Easter eggs for the Romanov court?", 
+                "Answer": "Faberge", 
+                "Hint": "Peter Carl" }
+            ],
+            "length": 1
         }
     ],
     "mathCheck": false

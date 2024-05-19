@@ -20,6 +20,16 @@
                 "Hint": "Andrew Lloyd" }
             ],
             "length": 1
+        },
+        {
+            "theme": "ELA (English Language Arts)",
+            "rule" : "Answer the question.",
+            "questions": [
+                { "Question": "What name is given to the part of the writing process which involves making changes for improvement in an already written draft?", 
+                "Answer": "Revision", 
+                "Hint": "The \"vision\" is alread down." }
+            ],
+            "length": 1
         }
     ],
     "mathCheck": false
