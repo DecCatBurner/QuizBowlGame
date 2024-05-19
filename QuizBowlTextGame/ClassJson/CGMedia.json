@@ -28,7 +28,7 @@
             "theme": "Poets",
             "rule" : "Name the poet.",
             "questions": [
-                { "Question": "This Massachusetts poet was the most popular American poet of the 19th century. Which author was known for works such as The Song of Hiawatha and Paul Revere&#39;s Ride?",
+                { "Question": "This Massachusetts poet was the most popular American poet of the 19th century. Which author was known for works such as The Song of Hiawatha and Paul Revere's Ride?",
                 "Answer": "Longfellow",
                 "Hint": "Henry Wadsworth"}
             ],
