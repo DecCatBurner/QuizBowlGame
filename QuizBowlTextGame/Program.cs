@@ -83,7 +83,8 @@ public class QuizBowlGame
             AddConcept("CGMedia.json"),
             AddConcept("CGScience.json"),
             AddConcept("CGArt.json"),
-            AddConcept("CGHistory.json")
+            AddConcept("CGHistory.json"),
+            AddConcept("CGPractice.json")
         };
         
         List<IVec3> questionsAnswered = new(); 
